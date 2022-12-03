@@ -9,14 +9,15 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class BusTicketMain {
 	
 	public static String busTime = "";
+	public static ReadConfig rc = new ReadConfig();
+	public static String base_url = rc.getApplicationURL();
 	
 	public static void main(String[] args) throws InterruptedException{        
 	    // declaration and instantiation of objects/variables
 	    System.setProperty("webdriver.chrome.driver", ".\\Drivers\\chromedriver.exe");
 	    WebDriver driver = new ChromeDriver();
-	    
 
-	    driver.navigate().to("https://www.busonlineticket.com/");
+	    driver.navigate().to(base_url);
 		driver.manage().window().maximize();
 
 	    WebElement originDropdown = driver.findElement(By.xpath("//input[@id = 'txtOrigin']"));
