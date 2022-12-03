@@ -15,7 +15,7 @@ public class BusTicketMain {
 	    System.setProperty("webdriver.chrome.driver", ".\\Drivers\\chromedriver.exe");
 	    WebDriver driver = new ChromeDriver();
 	    
-	    // Launch website  
+
 	    driver.navigate().to("https://www.busonlineticket.com/");
 		driver.manage().window().maximize();
 
