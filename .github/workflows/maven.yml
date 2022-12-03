@@ -41,7 +41,7 @@ jobs:
 
     - uses: actions/checkout@v2
     - id: hello
-      uses: shubham3357/BusTest/blob/master/src/test/java/com/busticket/BusTicketMain.java
+      uses: shubham3357/BusTest/blob/master/src/test/java/com/busticket/BusTicketMain.java@v0.0.2
     - run: ${{ steps.hello }}
       shell: bash
 
