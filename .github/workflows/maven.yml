@@ -37,13 +37,9 @@ jobs:
         value: 'https://www.busonlineticket.com/'
 
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      run: mvn --batch-mode --update-snapshots package
 
-    - uses: actions/checkout@v2
-    - id: hello
-      uses: shubham3357/BusTest/blob/master/src/test/java/com/busticket/BusTicketMain.java@v1
-    - run: ${{ steps.hello }}
-      shell: bash
+
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     - name: Update dependency graph
